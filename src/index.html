@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>cypress-start example application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="storage.js"></script>
+</head>
+
+
+<body onload="createInventory()">
+<h2>Superkiosken</h2>
+<p>Legg til varer og antall i handlekurven.</p>
+
+
+<div id="entry">
+    <label for="product">Vare</label>
+    <select id="product"></select>
+    <label for="quantity">Antall</label>
+    <input type=text id=quantity>
+    <input type=button id="saveItem" value="Lagre" onclick="saveItem()">
+    <input type=button id="deleteItem" value="Slett" onclick="deleteItem()">
+</div>
+
+<div id="cart">
+    <h3>Handlekurv</h3>
+    <ul id=list></ul>
+    <div>Totalpris: <span id="price"></span> kr</div>
+</div>
+
+<input type=button id="emptyCart" value="Tøm handlevogna" onclick="emptyCart()">
+<input type=button id="goToPayment" value="Gå til betaling" onclick="if(localStorage.length > 0) window.location.href = 'payment.html'">
+
+</body>
+</html>

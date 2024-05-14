@@ -1,0 +1,39 @@
+
+body {
+	font-family: verdana;
+	font-size: 11pt;
+}
+
+#quantity {
+	width: 2rem;
+}
+
+#product, #quantity {
+	margin-right: 0.5rem;	
+}
+
+#entry, #cart {
+	background-color: #00bbee;
+	border-radius: 1rem;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem
+}
+
+h3 {
+	margin-top: 0;
+}
+
+.formField {
+	margin-bottom: 0.5rem;
+}
+
+.formError {
+	color: tomato;
+}
+
+.confirmation {
+	background-color: #44cc44;
+	border-radius: 1rem;
+	padding: 1rem;
+	margin-bottom: 0.5rem
+}

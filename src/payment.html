@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>cypress-start example application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="storage.js"></script>
+</head>
+
+<body onload="updateCart()">
+<h2>Superkiosken</h2>
+<p>Legg inn navn, adresse og kortopplysninger for å fullføre handelen.</p>
+
+<div id="cart">
+    <h3>Handlekurv</h3>
+    <ul id=list></ul>
+    <div>Totalpris: <span id="price"></span> kr</div>
+</div>
+
+<div id="entry">
+    <form action="receipt.html" onsubmit="return validateForm()">
+        <div class="formField">
+            <label for="fullName">Navn</label>
+            <input type=text id="fullName" onblur="validate('fullName')">
+            <span class="formError" id="fullNameError"></span>
+        </div>
+        <div class="formField">
+            <label for="address">Adresse</label>
+            <input type=text id="address" onblur="validate('address')">
+            <span class="formError" id="addressError"></span>
+        </div>
+        <div class="formField">
+            <label for="postCode">Postnummer</label>
+            <input type=text id="postCode" onblur="validate('postCode')">
+            <span class="formError" id="postCodeError"></span>
+        </div>
+        <div class="formField">
+            <label for="city">Poststed</label>
+            <input type=text id="city" onblur="validate('city')">
+            <span class="formError" id="cityError"></span>
+        </div>
+        <div class="formField">
+            <label for="creditCardNo">Kredittkortnummer</label>
+            <input type=text id=creditCardNo onblur="validateCreditCardNo()">
+            <span class="formError" id="creditCardNoError"></span>
+        </div>
+        <div class="formField">
+            <input type=submit value="Fullfør handel">
+            <input type=button id="cancel" value="Avbryt" onclick="window.location.href='index.html'">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
